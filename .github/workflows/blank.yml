@@ -15,8 +15,12 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+      
   # This workflow contains a single job called "build"
   build:
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
