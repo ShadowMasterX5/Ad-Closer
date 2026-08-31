@@ -24,9 +24,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v5.1.0
+      - uses: actions/checkout@v6.1.0
+      - name: Safe download workflow artifact
+  # You may pin to the exact commit or the version.
+  # uses: Legit-Labs/action-download-artifact@59e00ed697336cebfce47ebbcb4de08af1625ef7
+        uses: Legit-Labs/action-download-artifact@v2.18.0
       
       # Runs a single command using the runners shell
       - name: Run a one-line script
